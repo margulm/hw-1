@@ -1,0 +1,18 @@
+<script>
+    var a = 0;
+    var b = 2;
+    var c = 3; 
+    while (a <= 100) {
+        if (a == b || a == c) {
+            console.log(a);
+            a++;
+        } else {
+            if (a%b == 0 || a%c == 0 || a == 1) {
+                a++;
+            } else {
+                console.log(a);
+                a++;
+            }
+        }
+    }
+</script>
