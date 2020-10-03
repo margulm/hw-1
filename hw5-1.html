@@ -15,20 +15,33 @@
             var table = document.querySelector('div').insertAdjacentHTML("afterbegin","<table></table>");
             var rows, cells;
             var arr=['A', 'B', 'C', 'D', 'E','F', 'G', 'H'];
-            for(var i=1; i<=8; i++) {
+            for(var i=1; i<=9; i++) {
                 rows = document.querySelector("table").insertAdjacentHTML("afterbegin","<tr></tr>");
                 rows = document.querySelector("table").style.borderStyle="solid";
-                for(var j=1; j<=8; j++) {
+                for(var j=1; j<=9; j++) {
                     cells = document.querySelector("tr").insertAdjacentHTML("afterbegin","<td></td>");
                     var cell = document.querySelector("td").style.borderStyle="solid";
                     cell = document.querySelector("td").style.borderColor="black";
                     cell = document.querySelector("td").style.width='30px';
                     cell = document.querySelector("td").style.height='30px';
                     cell = document.querySelector("td").style.color='red';
-                    cell = document.querySelector("td").innerText=arr[j-1]+i;
+                    //cell = document.querySelector("td").innerText=arr[j-1]+i;
                     if((i+j) % 2 != 0) {
                         cell=document.querySelector("td").style.backgroundColor="gray";
                     } else cell=document.querySelector("td").style.backgroundColor="#FFDB73";
+                    switch (j) {
+                        case 1:
+                        cell = document.querySelector("td").innerText=arr[i-2];
+                        cell=document.querySelector("td").style.backgroundColor="red";
+                        cell = document.querySelector("td").style.color='black';
+                    }
+                    switch (i) {
+                        case 1:
+                        cell = document.querySelector("td").innerText=j-1;
+                        cell=document.querySelector("td").style.backgroundColor="red";
+                        cell = document.querySelector("td").style.color="black";
+                    }
+
                     
                 }
             }
