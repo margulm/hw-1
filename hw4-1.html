@@ -1,0 +1,30 @@
+<script>
+    var answer = prompt('от 0 до 999');
+    var lenght = answer.length;
+    var Num = {};
+    numToObject(answer);
+
+    function numToObject(x) {
+        if (x < 0 || x > 999) {
+            console.log('Число '+answer+' неверно');
+            console.log(Num);
+        } else {
+            if (lenght == 3) {
+                Num.hundred = answer[0];
+                Num.ten = answer[1];
+                Num.unit = answer[2];
+                console.log(Num);
+            } else if (lenght == 2) {
+                Num.ten = answer[0];
+                Num.unit = answer[1];
+                console.log(Num);
+            } else if (lenght == 1) {
+                Num.unit = answer[0];
+                console.log(Num);
+            }
+        }
+    }
+
+    
+    
+</script>
